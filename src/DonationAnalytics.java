@@ -6,11 +6,13 @@ import java.util.*;
  * */
 public class DonationAnalytics {
 	
-	//key cmte_id#zip#year value: a list of contributions
+	//the hashtable for storing:key cmte_id#zip#year value: a list of contributions
+	//the reason why I do this is only cmte_id and zip and year together can indicate whether a donor is repeat
 	Map<String,List<Integer>> table=new HashMap<String,List<Integer>>();
+	//the hashset for storing all of the donor have seen
 	Set<String> denotor_pool=new HashSet<String>();
 	/*
-	 * below the function used to detect whether the record is valid
+	 * below the functions used to detect whether the record is valid
 	 * */
 	public boolean isValidOtherId(String input){
 		if(input.length()==0){
