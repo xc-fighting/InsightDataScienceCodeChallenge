@@ -192,7 +192,7 @@ public class DonationAnalytics {
 	
 	public static void main(String[] args){
 		 DonationAnalytics solution=new DonationAnalytics();
-		 solution.runSolution(args[1],args[2],args[3]);
+		 solution.runSolution(args[0],args[1],args[2]);
 		 
 	}
 
